@@ -4,7 +4,12 @@
 
 1. `clip`在`HTML5`中已经被废弃了(依然可用)，取而代之的是`clip-path`。
 
-2. `clip:rect`与`clip-path: inset`的裁剪方式不同。一个是计算裁剪后的尺寸，一个是计算被裁剪的尺寸。
+   **`clip`被遗弃的原因**：
+
+   - `clip`只对绝对定位的元素有效
+   - `clip`只能用于矩形裁剪，即`rect()`函数
+
+2. `clip:rect`与`clip-path: inset`的对矩形裁剪的方式不同。一个是计算裁剪后的尺寸，一个是计算被裁剪的尺寸。
 
    ```css
    clip:rect(50px 250px 250px 50px);
