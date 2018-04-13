@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clip-path</title>
+    <style type="text/css">
+
+    @keyframes lineA{
+        0%,100%{clip-path:inset(0 0 338px 0)}
+        25%{clip-path:inset(0 338px 0 0)}
+        50%{clip-path:inset(338px 0 0 0)}
+        75%{clip-path:inset(0 0 0 338px)}
+    }
+    @keyframes lineB{
+        0%,100%{clip-path:inset(338px 0 0 0)}
+        25%{clip-path:inset(0 0 0 338px)}
+        50%{clip-path:inset(0 0 338px 0)}
+        75%{clip-path:inset(0 338px 0 0)}
+    }
+    .box{
+        background-color: #f1f1f1;
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+        position: relative;
+        z-index: 3;
+    }
+    .box::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border: 2px solid red;
+        margin: -20px;
+        z-index: -1;
+        -webkit-animation: lineA 8s linear infinite;
+        -o-animation: lineA 8s linear infinite;
+        animation: lineA 8s linear infinite;
+    }
+    .box::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border: 2px solid red;
+        margin: -20px;
+        z-index: -1;
+        -webkit-animation: lineB 8s linear infinite;
+        -o-animation: lineB 8s linear infinite;
+        animation: lineB 8s linear infinite;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
