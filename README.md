@@ -1,4 +1,4 @@
-> ### [在线预览](http://www.victor.ac.cn/css/css3_moving_border/)
+> ### [线上预览](http://www.victor.ac.cn/css/css3_moving_border/)
 
 
 **原理**：使用`clip`/`clip-path`属性对伪元素`before`和`after`编写的盒子进行裁切，用通过`animation`动画来让它们运动起来。
